@@ -11,16 +11,15 @@ package hangman.model;
  */
 public interface GameScore {
     /**
-     * @throws hangman.exceptions.ExceptionValorInvalido
+     * @param incorrectCount
+     * @throws hangman.exceptions.ExcepcionValorInvalido
      * @pre correctCount numero entero, incorrectCount numero entero
      * @pos  se calcula el puntaje teniendo en cuenta los parametros
      * @param correctCount Numero de respuestas correctas de la persona
      * @param incorrectCountNumero Numero de respuestas correctas de la persona
      * @return score
      */
-    public int calculateScore(int correctCount, int incorrectCount) throws ExceptionValorInvalido
-    {
-    }
+    public int calculateScore(int correctCount, int incorrectCount);
 }
 
 

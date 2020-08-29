@@ -5,6 +5,8 @@
  */
 package hangman.model;
 
+import hangman.exceptions.ExcepcionValorInvalido;
+
 /**
  *
  * @author Javier Esteban López Peña
@@ -12,7 +14,7 @@ package hangman.model;
  */
 public class BonusScore implements GameScore{
     /**
-     * @throws hangman.exceptions.ExceptionValorInvalido
+     * @throws hangman.exceptions.ExcepcionValorInvalido
      * @pre correctCount numero entero, incorrectCount numero entero
      * @pos  se le suma la multiplicacion del correctCount por 10 y se le resta 
      * la multiplicación de incorrectCount por 5
@@ -20,7 +22,15 @@ public class BonusScore implements GameScore{
      * @param incorrectCountNumero Numero de respuestas correctas de la persona
      * @return score
      */
-    public int calculateScore(int correctCount, int incorrectCount) throws ExceptionValorInvalido
+    public int calculateScore(int correctCount, int incorrectCount)
     {
+        int score = 0;
+        score += correctCount*10;
+        score -= incorrectCount*5;
+        if (score < 0)
+        {
+            score=0;
+        }
+        return score;
     }
 }
