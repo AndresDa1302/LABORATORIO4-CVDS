@@ -14,14 +14,24 @@ public class PowerBonusScore implements GameScore{
     /**
      * @throws hangman.exceptions.ExcepcionValorInvalido
      * @pre correctCount numero entero, incorrectCount numero entero
-     * @pos  se le suma 5 puntos por una $i-ésima$ letra correcta y se le resta 
+     * @pos  se le suma 5 puntos elevado $i-ésima$ letra correcta y se le resta 
      * la multiplicación de incorrectCount por 8
      * @param correctCount Numero de respuestas correctas de la persona
-     * @param incorrectCountNumero Numero de respuestas correctas de la persona
+     * @param incorrectCount Numero Numero de respuestas correctas de la persona
      * @return score
      */
     public int calculateScore(int correctCount, int incorrectCount)
     {
-        return 0;
+        int score = 0;
+        score += Math.pow(5,correctCount);
+        score -= incorrectCount*8;
+        if (score < 0)
+        {
+            score=0;
+        }else if (score > 500)
+        {
+            score=500;
+        }
+        return score;
     }
 }
