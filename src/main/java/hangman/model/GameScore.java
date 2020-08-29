@@ -7,6 +7,7 @@ package hangman.model;
 /**
  *
  * @author Javier Esteban López Peña
+ * @author Andrés Felipe Dávila Gutierrez
  */
 public interface GameScore {
     /**

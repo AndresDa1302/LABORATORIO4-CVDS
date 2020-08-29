@@ -7,7 +7,8 @@ package hangman.model;
 
 /**
  *
- * @author Asus
+ * @author Javier Esteban López Peña
+ * @author Andrés Felipe Dávila Gutierrez
  */
 public class OriginalScore implements GameScore{
    /**
