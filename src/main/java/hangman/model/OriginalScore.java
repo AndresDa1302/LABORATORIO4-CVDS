@@ -19,6 +19,7 @@ public class OriginalScore implements GameScore{
      * @param incorrectCountNumero Numero de respuestas correctas de la persona
      * @return score
      */
+    @Override
     public int calculateScore(int correctCount, int incorrectCount)
     {
         int score = 100;
