@@ -1,7 +1,11 @@
 ### Laboratorio 4 - Hangman - 2020-2
-En este repositorio veremos el desarrollo de hangman, donde repasamos el patrón Factory y el patrón de inyección Guice. Este laboratorio es realizado para la clase de CVDS como cuarto laboratorio por lo estudiantes
+En este repositorio veremos el desarrollo de hangman, donde repasamos el patrón Factory y el patrón de inyección Guice. Este laboratorio es realizado para la clase de CVDS como cuarto laboratorio
+
+Integrantes:
 - Andrés Felipe Dávila Gutierrez
 - Javier Esteban López Peña
+
+Realizado en Apache Netbeans IDE 11.2
 
 ### Escuela Colombiana de Ingeniería
 
