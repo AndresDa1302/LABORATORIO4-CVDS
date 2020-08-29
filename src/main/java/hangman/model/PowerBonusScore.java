@@ -12,7 +12,7 @@ package hangman.model;
  */
 public class PowerBonusScore implements GameScore{
     /**
-     * @throws hangman.exceptions.ExceptionValorInvalido
+     * @throws hangman.exceptions.ExcepcionValorInvalido
      * @pre correctCount numero entero, incorrectCount numero entero
      * @pos  se le suma 5 puntos por una $i-ésima$ letra correcta y se le resta 
      * la multiplicación de incorrectCount por 8
@@ -20,7 +20,8 @@ public class PowerBonusScore implements GameScore{
      * @param incorrectCountNumero Numero de respuestas correctas de la persona
      * @return score
      */
-    public int calculateScore(int correctCount, int incorrectCount) throws ExceptionValorInvalido
+    public int calculateScore(int correctCount, int incorrectCount)
     {
+        return 0;
     }
 }
