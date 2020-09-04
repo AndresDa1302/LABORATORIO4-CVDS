@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package hangman.model;
-
+import hangman.exceptions.ExcepcionValorInvalido;
 /**
  *
  * @author Javier Esteban López Peña
@@ -20,8 +20,12 @@ public class OriginalScore implements GameScore{
      * @return score
      */
     @Override
-    public int calculateScore(int correctCount, int incorrectCount)
+    public int calculateScore(int correctCount, int incorrectCount)throws ExcepcionValorInvalido
     {
+        if(correctCount<0 || incorrectCount<0) 
+        {
+            throw new ExcepcionValorInvalido(ExcepcionValorInvalido.mensajeValorInvalido); 
+        }
         int score = 100;
         score -= incorrectCount*10;
         if (score < 0)

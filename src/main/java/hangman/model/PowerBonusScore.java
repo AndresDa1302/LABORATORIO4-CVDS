@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package hangman.model;
-
+import hangman.exceptions.ExcepcionValorInvalido;
 /**
  *
  * @author Javier Esteban López Peña
@@ -20,12 +20,16 @@ public class PowerBonusScore implements GameScore{
      * @param incorrectCount Numero Numero de respuestas correctas de la persona
      * @return score
      */
-    public int calculateScore(int correctCount, int incorrectCount)
+    public int calculateScore(int correctCount, int incorrectCount)throws ExcepcionValorInvalido
     {
+        if(correctCount<0 || incorrectCount<0) 
+        {
+            throw new ExcepcionValorInvalido(ExcepcionValorInvalido.mensajeValorInvalido); 
+        }
         int score = 0;
         score += Math.pow(5,correctCount);
         score -= incorrectCount*8;
-        if (score < 0)
+        if (score <= 0)
         {
             score=0;
         }else if (score > 500)

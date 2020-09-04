@@ -7,8 +7,14 @@ package hangman.exceptions;
 
 /**
  *
- * @author Asus
+ * @author andres.gonzalez-ca
  */
-public class ExcepcionValorInvalido {
+public class ExcepcionValorInvalido extends Exception{
     
+    public static String mensajeValorInvalido="VALOR INVALIDO";
+    
+    public ExcepcionValorInvalido(String msg){
+        super(msg);
+        
+    }
 }

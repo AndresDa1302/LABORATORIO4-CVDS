@@ -22,8 +22,12 @@ public class BonusScore implements GameScore{
      * @param incorrectCountNumero Numero de respuestas correctas de la persona
      * @return score
      */
-    public int calculateScore(int correctCount, int incorrectCount)
+    public int calculateScore(int correctCount, int incorrectCount)throws ExcepcionValorInvalido
     {
+          if(correctCount<0 || incorrectCount<0) 
+        {
+            throw new ExcepcionValorInvalido(ExcepcionValorInvalido.mensajeValorInvalido); 
+        }
         int score = 0;
         score += correctCount*10;
         score -= incorrectCount*5;
