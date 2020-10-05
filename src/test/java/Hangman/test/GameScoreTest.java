@@ -436,6 +436,19 @@ public class GameScoreTest {
         }
         
         assertEquals(1,res);
+    
+	}
+	 @Test
+    public void calcularPowerBonusFrontera51(){
+        PowerBonusScore score = new PowerBonusScore();
+        int res=-5;
+        try {
+            res = score.calculateScore(0,0);
+        } catch (ExcepcionValorInvalido ex) {
+            Logger.getLogger(GameScoreTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        assertEquals(1,res);
     }
     
 }
